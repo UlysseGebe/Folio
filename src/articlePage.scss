@@ -1,0 +1,51 @@
+.article .presentation h2 {
+    font-weight: 400;
+    margin: -10px 0 10px 0;
+}
+
+.article .presentation p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.article .work {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article .work video {
+    width: 75%;
+    height: auto;
+}
+
+.article .work legend {
+    color: rgb(169, 169, 169);
+    padding-top: 10px;
+}
+
+.article .also {
+    width: 75%;
+    margin: 100px auto 0 auto;
+}
+
+.article .also .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.article .also .content article {
+    flex-direction: column;
+    width: 350px;
+    margin: 0 20px 0 0;
+}
+
+.article .also .content article .cover {
+    width: 100%;
+}
+
+.article .also .content article .title {
+    width: 100%;
+    height: 50%;
+}

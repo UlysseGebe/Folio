@@ -34,6 +34,18 @@ header nav ul li {
 
 header nav ul li a {
     font-size: 1.1em;
+    font-weight: 300;
+    color: #999999;
+    transition: color 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: black;
+}
+
+header nav ul li a.active {
+    color: black;
+    font-weight: 400;
 }
 
 header h1 {
