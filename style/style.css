@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 5px solid #f2f2f2;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+header a {
+    color: #191919;
+    text-decoration: none;
+}
+
+header nav {
+    width: 30%;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav ul li {
+    padding-left: 20px;
+}
+
+header nav ul li a {
+    font-size: 1.1em;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header .social {
+    width: 30%;
+    text-align: end;
+}
+
+header .social a {
+    padding-right: 20px;
+}
+header .social a img {
+    width: 30px;
+}
+
+.presentation {
+    background-color: rgba(140, 80, 58, 0.36);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.presentation h1 {
+    color: #191919;
+    font-size: 4em;
+    margin: 0 0 15px 0;
+}
+
+.presentation h2 {
+    width: 800px;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 28px;
+}
+
+.presentation .button {
+    margin-top: 30px;
+    border: 1px solid rgba(25, 25, 25, 0.6);
+    border-radius: 5px;
+    color: #191919;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    text-transform: uppercase;
+}
+
+.presentation .social {
+    margin-top: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.presentation .social a img{
+    width: 40px;
+}
+
+article {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+article:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+article .cover {
+    width: calc(100% - 450px);
+    height: 450px;
+    background: #9c9c9c;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .cover img {
+    transition: opacity 0.2s ease;
+}
+
+article .title {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f2f2f2;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+article:hover .cover img {
+    opacity: .5; 
+}
+
+article:hover .title {
+    background-color: black; 
+    color: white;
+}
+
+footer {
+    height: 400px;
+}
