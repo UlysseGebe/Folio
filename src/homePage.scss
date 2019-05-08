@@ -16,7 +16,7 @@
 }
 
 .presentation h2 {
-    width: 800px;
+    max-width: 800px;
     font-size: 1.5em;
     text-align: center;
     line-height: 40px;
@@ -142,4 +142,29 @@ article:hover .cover img {
 article:hover .title {
     background-color: black; 
     color: white;
+}
+
+@media only screen and (min-width: 690px) and (max-width: 990px) {
+    article .cover {
+        width: 450px;
+    }
+    article .title {
+        width: calc(100% - 450px);
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    article,
+    article:nth-child(2n) {
+        flex-direction: column;
+        height: auto;
+    }
+    article .cover {
+        width: 100%;
+        height: 690px;
+    }
+    article .title {
+        width: 100%;
+        height: 300px;
+    }
 }

@@ -1,7 +1,36 @@
-* {font-family: 'Source Sans Pro', sans-serif;}
-h1 {font-weight: 700;}
-h2 {font-weight: 300;}
-body {margin: 0;}
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1, h2, p {
+    width: 90%;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+body.is-active {
+    overflow: hidden;
+}
+
 @import "header";
 @import "homePage";
 @import "contactPage";

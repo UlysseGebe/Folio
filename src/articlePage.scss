@@ -18,6 +18,8 @@
 .article .work legend {
     color: rgb(169, 169, 169);
     padding-top: 10px;
+    width: 90%;
+    text-align: center;
 }
 
 .article .also {
@@ -28,6 +30,7 @@
 .article .also .content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .article .also .content article {
@@ -43,4 +46,20 @@
 .article .also .content article .title {
     width: 100%;
     height: 50%;
+}
+
+@media only screen and (max-width: 990px) {
+    .article .also {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .article .also .content {
+        justify-content: center;
+    }
+    .article .also .content article {
+        width: 100%;
+        margin: 10px 0;
+    }
 }

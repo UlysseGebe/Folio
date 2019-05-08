@@ -7,10 +7,24 @@ h1 {
 h2 {
   font-weight: 300; }
 
+h3 {
+  margin: 10px 0; }
+
+p {
+  margin-bottom: 0; }
+
+h1, h2, p {
+  width: 90%;
+  text-align: center; }
+
 body {
   margin: 0; }
 
+body.is-active {
+  overflow: hidden; }
+
 header {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +34,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
-  transition: background 0.3s ease, border 0.3s ease; }
+  transition: background 0.3s ease, border 0.3s ease, height 1s ease;
+  overflow: hidden; }
 
 header a {
   color: #191919;
@@ -68,6 +83,108 @@ header .social a {
 header .social a img {
   width: 30px; }
 
+header .burgermenu {
+  position: absolute;
+  top: 38px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+  display: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center; }
+
+header .burgermenu .lines {
+  background-color: black;
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  transition-delay: 0.3s;
+  transition: transform 0.5s ease; }
+
+header .burgermenu .lines::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 6px;
+  cursor: pointer;
+  transform-origin: left;
+  transition: transform 0.2s ease; }
+
+header .burgermenu .lines::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  bottom: 6px;
+  transition-delay: 0.3s;
+  transition: transform 0.5s ease; }
+
+@media only screen and (max-width: 990px) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+
+  header .burgermenu {
+    display: flex; }
+
+  header .social {
+    display: none;
+    text-align: center;
+    margin-bottom: 50px; }
+
+  header .social a:last-child {
+    padding: 0; }
+
+  header .social a img {
+    width: 40px; }
+
+  header nav {
+    display: none;
+    text-align: center;
+    height: calc(100vh - 90px); }
+
+  header nav ul {
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    justify-content: center; }
+
+  header nav ul li {
+    padding: 0;
+    font-size: 3em; }
+
+  header nav ul li:first-child {
+    margin-bottom: 10%; } }
+header.is-active {
+  background-color: #ffffff !important;
+  border-bottom: 5px solid #f2f2f2 !important;
+  height: 100vh; }
+
+header h1.is-active {
+  display: none !important; }
+
+header .social.is-active {
+  display: block; }
+
+header nav.is-active {
+  display: block; }
+
+header .burgermenu .lines.is-active {
+  transform: rotate(45deg);
+  transform-origin: center; }
+
+header .burgermenu .lines.is-active::before {
+  transform: scaleX(0); }
+
+header .burgermenu .lines.is-active::after {
+  bottom: 0;
+  transform: rotate(90deg); }
+
 .presentation {
   background-color: rgba(140, 80, 58, 0.36);
   height: 100vh;
@@ -84,7 +201,7 @@ header .social a img {
   margin: 0 0 15px 0; }
 
 .presentation h2 {
-  width: 800px;
+  max-width: 800px;
   font-size: 1.5em;
   text-align: center;
   line-height: 40px; }
@@ -209,6 +326,25 @@ article:hover .title {
   background-color: black;
   color: white; }
 
+@media only screen and (min-width: 690px) and (max-width: 990px) {
+  article .cover {
+    width: 450px; }
+
+  article .title {
+    width: calc(100% - 450px); } }
+@media only screen and (max-width: 690px) {
+  article,
+  article:nth-child(2n) {
+    flex-direction: column;
+    height: auto; }
+
+  article .cover {
+    width: 100%;
+    height: 690px; }
+
+  article .title {
+    width: 100%;
+    height: 300px; } }
 .contact {
   width: 100%;
   height: auto;
@@ -287,7 +423,9 @@ article:hover .title {
 
 .article .work legend {
   color: darkgray;
-  padding-top: 10px; }
+  padding-top: 10px;
+  width: 90%;
+  text-align: center; }
 
 .article .also {
   width: 75%;
@@ -295,7 +433,8 @@ article:hover .title {
 
 .article .also .content {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .article .also .content article {
   flex-direction: column;
@@ -309,6 +448,19 @@ article:hover .title {
   width: 100%;
   height: 50%; }
 
+@media only screen and (max-width: 990px) {
+  .article .also {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+  .article .also .content {
+    justify-content: center; }
+
+  .article .also .content article {
+    width: 100%;
+    margin: 10px 0; } }
 @keyframes plyr-progress {
   to {
     background-position: 25px 0; } }
