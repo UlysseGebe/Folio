@@ -8,21 +8,22 @@ const $burger = $header.querySelector('.burgermenu')
 const $lines = $burger.querySelector('.lines')
 const $cover = document.querySelectorAll('.cover')
 
-if (window.location.href.indexOf("contact") != -1) {
+const see = () => {
     $header.style.backgroundColor = '#ffffff'
     $header.style.borderBottom = '5px solid #f2f2f2'
     $logo.style.display = 'block'
     $logo.style.opacity = '1'
 }
+
+if (window.location.href.indexOf("contact") != -1) {
+    see()
+}
 else {
-    let limit = $pres.offsetHeight / 1.05
     window.addEventListener('scroll', () => {
+        let limit = 550
         let position = $pres.offsetHeight - window.pageYOffset
         if (position < limit) {
-            $header.style.backgroundColor = '#ffffff'
-            $header.style.borderBottom = '5px solid #f2f2f2'
-            $logo.style.display = 'block'
-            $logo.style.opacity = '1'
+            see()
         }
         else if (position > limit) {
             $header.style.backgroundColor = 'rgba(255, 255, 255, 0)'

@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .article .also .content article {
@@ -61,5 +62,8 @@
     .article .also .content article {
         width: 100%;
         margin: 10px 0;
+    }
+    .article .also .content article .title {
+        height: 25%;
     }
 }
